@@ -6,8 +6,8 @@ const Grades = () => {
             <div className="grades">
                 <select>
                     <option value="tc">Tronc Commun</option>
-                    <option value="1bac">1 Bac</option>
-                    <option value="2bac">2 Bac</option>
+                    <option value="1bac">Premiere annee Bac</option>
+                    <option value="2bac">Deuxieme annee Bac</option>
                 </select>
             </div>
         </div>
