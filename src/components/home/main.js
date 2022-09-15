@@ -1,6 +1,6 @@
 import React from "react";
-import orbit from "../images/orbit.svg";
-import landing from "../images/landing.svg";
+import orbit from "../../images/orbit.svg";
+import landing from "../../images/landing.svg";
 
 const Main = () => {
     return (

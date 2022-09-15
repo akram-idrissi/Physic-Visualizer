@@ -1,12 +1,9 @@
-import { React, createContext, useState } from "react";
+import { React } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ContextProvider } from "./components/context";
 import Collection from "./components/collection";
+import Landing from "./components/home/landing";
 import About from "./components/about";
 import "./App.css";
-import Landing from "./components/landing";
-
-const Context = createContext();
 
 const App = () => {
     return (
