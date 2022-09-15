@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Collection from "./components/collection";
 import Landing from "./components/home/landing";
 import About from "./components/about";
+import "p5";
 import "./App.css";
 
 const App = () => {

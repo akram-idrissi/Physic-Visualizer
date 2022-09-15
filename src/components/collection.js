@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import { React, useEffect } from "react";
+import GravitanionalAttraction from "../physics/ga/gravitational attraction";
+import ToHome from "./tohome";
 
 const Collection = () => {
     useEffect(() => {
@@ -16,59 +18,62 @@ const Collection = () => {
     });
 
     return (
-        <section className="visualization">
-            <canvas id="canvas"></canvas>
-            <div className="controls-container">
-                <div className="input">
-                    <label className="label">Gravity</label>
-                    <div className="controls">
-                        <input
-                            className="range-value"
-                            type="text"
-                            defaultValue="10.0"
-                        />
-                        <input
-                            className="range"
-                            type="range"
-                            min="1"
-                            max="100"
-                        />
+        <>
+            <ToHome />
+            <section className="visualization animation fade-center delay-0-25">
+                <GravitanionalAttraction />
+                <div className="controls-container">
+                    <div className="input">
+                        <label className="label">Gravity</label>
+                        <div className="controls">
+                            <input
+                                className="range-value"
+                                type="text"
+                                defaultValue="10.0"
+                            />
+                            <input
+                                className="range"
+                                type="range"
+                                min="1"
+                                max="100"
+                            />
+                        </div>
+                    </div>
+                    <div className="input">
+                        <label className="label">Air resistence</label>
+                        <div className="controls">
+                            <input
+                                className="range-value"
+                                type="text"
+                                defaultValue="10.0"
+                            />
+                            <input
+                                className="range"
+                                type="range"
+                                min="1"
+                                max="100"
+                            />
+                        </div>
+                    </div>
+                    <div className="input">
+                        <label className="label">Box size</label>
+                        <div className="controls">
+                            <input
+                                className="range-value"
+                                type="text"
+                                defaultValue="10.0"
+                            />
+                            <input
+                                className="range"
+                                type="range"
+                                min="1"
+                                max="100"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div className="input">
-                    <label className="label">Air resistence</label>
-                    <div className="controls">
-                        <input
-                            className="range-value"
-                            type="text"
-                            defaultValue="10.0"
-                        />
-                        <input
-                            className="range"
-                            type="range"
-                            min="1"
-                            max="100"
-                        />
-                    </div>
-                </div>
-                <div className="input">
-                    <label className="label">Box size</label>
-                    <div className="controls">
-                        <input
-                            className="range-value"
-                            type="text"
-                            defaultValue="10.0"
-                        />
-                        <input
-                            className="range"
-                            type="range"
-                            min="1"
-                            max="100"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 };
 
