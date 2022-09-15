@@ -1,21 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 
 const NavBar = () => {
     return (
         <header>
             <nav>
-                <a href="/" className="animation fade-center">
+                <Link to="/" className="animation fade-center">
                     <img src={logo} alt="logo" />
-                </a>
+                </Link>
 
                 <div className="actions animation fade-center">
-                    <a href="/">
+                    <Link to="/collections">
                         <button className="btn">Collections</button>
-                    </a>
-                    <a href="/">
+                    </Link>
+                    <Link to="/about">
                         <button className="btn">About</button>
-                    </a>
+                    </Link>
                 </div>
             </nav>
         </header>
