@@ -30,7 +30,7 @@ const Collection = () => {
                         <input
                             className="range"
                             type="range"
-                            min="10"
+                            min="1"
                             max="100"
                         />
                     </div>
@@ -46,7 +46,7 @@ const Collection = () => {
                         <input
                             className="range"
                             type="range"
-                            min="10"
+                            min="1"
                             max="100"
                         />
                     </div>
@@ -62,7 +62,7 @@ const Collection = () => {
                         <input
                             className="range"
                             type="range"
-                            min="10"
+                            min="1"
                             max="100"
                         />
                     </div>
