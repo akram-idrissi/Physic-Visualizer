@@ -1,22 +1,36 @@
 import { React } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Collection from "./components/collection";
-import Landing from "./components/home/landing";
+
 import About from "./components/about";
-import "p5";
+import Landing from "./components/home/landing";
+import Collection from "./components/collection/collection";
+
 import "./App.css";
+import "./components/home/home.css";
+import "./components/collection/collection.css";
+import { ContextProvider } from "./context/context";
+import Visualization from "./components/visualization";
 
 const App = () => {
     return (
-        <main className="container">
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Landing />}></Route>
-                    <Route exact path="/about" element={<About />}></Route>
-                    <Route path="/collections" element={<Collection />}></Route>
-                </Routes>
-            </Router>
-        </main>
+        <ContextProvider>
+            <main className="container">
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Landing />}></Route>
+                        <Route
+                            path="/visualize/:name"
+                            element={<Visualization />}
+                        ></Route>
+                        <Route path="/about" element={<About />}></Route>
+                        <Route
+                            path="/collections"
+                            element={<Collection />}
+                        ></Route>
+                    </Routes>
+                </Router>
+            </main>
+        </ContextProvider>
     );
 };
 

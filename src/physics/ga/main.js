@@ -27,8 +27,8 @@ const sketch = (p5) => {
     };
 };
 
-const GravitanionalAttraction = () => {
+const Main = () => {
     return <ReactP5Wrapper sketch={sketch} />;
 };
 
-export default GravitanionalAttraction;
+export default Main;
