@@ -2,6 +2,8 @@
 
 /* Start Global Rules */
 * {
+    margin: 0;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -38,6 +40,7 @@ ul {
 }
 
 .container {
+    position: relative;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
@@ -88,13 +91,15 @@ ul {
 }
 
 .to-home {
+    top: 6px;
+    left: 26px;
     border: none;
     display: flex;
     color: #fff;
     cursor: pointer;
     font-weight: 500;
+    position: absolute;
     align-items: center;
-    margin: 1rem 0 2rem 0;
     border-radius: 0.5rem;
     padding: 0.35rem 1rem 0.45rem;
     justify-content: space-between;
@@ -113,14 +118,13 @@ ul {
     height: 1rem;
     color: #fff;
 }
+
+.back-header {
+    margin-top: 2rem;
+}
 /* End global classes */
 
 /* Start navbar */
-header {
-    display: flex;
-    align-items: center;
-}
-
 header nav {
     flex: 1;
     height: 5rem;
@@ -158,6 +162,25 @@ header nav {
     background-color: var(--secondary-btn-hover-color);
     transition: var(--main-transition) ease-in-out;
 }
+
+@media (max-width: 767px) {
+    header nav {
+        text-align: center;
+        justify-content: center;
+    }
+
+    header nav .logo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 412px) {
+    .actions button {
+        width: 6rem;
+        font-size: 0.8rem;
+        padding: 0.35rem 0.8rem 0.35rem;
+    }
+}
 /* End navbar */
 
 /* Start landing */
@@ -170,15 +193,15 @@ header nav {
 }
 
 .landing .img {
+    top: 20px;
     right: 0;
-    top: 10px;
     width: 500px;
     height: 500px;
     display: inline-block;
     position: absolute;
     animation: fade-right 1.75s cubic-bezier(0.075, 0.82, 0.165, 1) 1.1s
             alternate both,
-        up-and-down 5s linear 2s infinite;
+        up-and-down 4s linear 2s infinite;
 }
 
 .title {
@@ -203,11 +226,83 @@ header nav {
 
 .description {
     color: #777;
-    font-size: 0.8rem;
-    margin: 1rem 0 0 0;
-    line-height: 1.3rem;
-    word-break: break-word;
+    font-size: 14px;
+    margin: 5px 0 0;
+    line-height: 1.7;
+    max-width: 500px;
+    font-weight: 100;
+    text-align: center;
     text-transform: capitalize;
+}
+
+@media (max-width: 1199px) {
+    .landing .img {
+        width: 450px;
+        height: 450px;
+    }
+
+    .landing .title {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    .landing .text img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 991px) {
+    .landing .img {
+        display: none;
+    }
+
+    .landing .title {
+        flex: 1;
+        margin: auto;
+        text-align: center;
+    }
+
+    .landing .title .text {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .landing .description {
+        margin: 10px auto auto auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing .title {
+        line-height: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .landing .text img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .landing .description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 415px) {
+    .landing .title {
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .landing .text img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .landing .description {
+        font-size: 11px;
+    }
 }
 /* End landing */
 
@@ -304,6 +399,7 @@ header nav {
 /* Start visualization  */
 .visualization {
     display: flex;
+    margin-top: 2rem;
     position: relative;
     align-items: center;
     justify-content: space-around;
@@ -312,7 +408,6 @@ header nav {
 .visualization-name {
     color: #fff;
     text-align: center;
-    margin: 3rem 0 1rem 0;
 }
 
 #canvas {
@@ -605,10 +700,10 @@ header nav {
 @keyframes up-and-down {
     0%,
     100% {
-        top: 10px;
+        top: 20px;
     }
     50% {
-        top: 70px;
+        top: -20px;
     }
 }
 

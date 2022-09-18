@@ -6,13 +6,15 @@ const NavBar = () => {
     return (
         <header>
             <nav>
-                <Link to="/" className="animation fade-center">
-                    <img src={logo} alt="logo" />
-                </Link>
+                <div className="logo animation fade-center">
+                    <Link to="/">
+                        <img src={logo} alt="logo" />
+                    </Link>
+                </div>
 
                 <div className="actions animation fade-center">
                     <Link to="/collections">
-                        <button className="btn">Collections</button>
+                        <button className="btn">Try Now</button>
                     </Link>
                     <Link to="/about">
                         <button className="btn">About</button>

@@ -6,7 +6,7 @@ const items = [
         path: "ga/main",
         grade: "tc",
         props: [
-            { id: 1, min: 1, max: 10, step: 0.5, name: "Gravity" },
+            { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
     },

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ToHome = () => {
     return (
         <Link to="/">
-            <button className="to-home animation fade-center">
+            <button className="to-home">
                 <span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

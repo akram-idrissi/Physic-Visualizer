@@ -5,10 +5,10 @@ import About from "./components/about";
 import Landing from "./components/home/landing";
 import Collection from "./components/collection/collection";
 
-import "./normalize.css";
-import "./all.css";
 import { ContextProvider } from "./context/context";
-import Visualization from "./components/visualization";
+import Visualization from "./components/visualization/visualization";
+
+import "./static/all.css";
 
 const App = () => {
     return (

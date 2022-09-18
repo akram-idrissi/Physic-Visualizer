@@ -1,5 +1,6 @@
 import { React, useContext } from "react";
 import { Context } from "../../context/context";
+import ToHome from "../tohome";
 import CollectionCard from "./collection-card";
 import Grades from "./grades";
 
@@ -8,6 +9,7 @@ const Collection = () => {
 
     return (
         <>
+            <ToHome />
             <Grades />
             <div className="collections">
                 {collections.map((collection) => (
