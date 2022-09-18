@@ -5,9 +5,8 @@ import About from "./components/about";
 import Landing from "./components/home/landing";
 import Collection from "./components/collection/collection";
 
-import "./App.css";
-import "./components/home/home.css";
-import "./components/collection/collection.css";
+import "./normalize.css";
+import "./all.css";
 import { ContextProvider } from "./context/context";
 import Visualization from "./components/visualization";
 

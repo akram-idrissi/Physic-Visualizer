@@ -17,7 +17,7 @@ const Main = () => {
                 </p>
             </h1>
 
-            <img className="landing-img" alt="landing" src={landing}></img>
+            <img className="img" alt="landing" src={landing}></img>
         </div>
     );
 };
