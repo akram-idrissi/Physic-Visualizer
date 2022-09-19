@@ -509,12 +509,6 @@ header nav {
     color: #fff;
     text-align: center;
 }
-
-canvas {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 0.5rem;
-}
 /* End visualization  */
 
 /* Start controls */
@@ -583,6 +577,12 @@ canvas {
     .visualization {
         flex-direction: column;
         justify-content: center;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 0.5rem;
     }
 
     .controls-container {
