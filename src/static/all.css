@@ -174,16 +174,48 @@ header nav {
     }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 415px) {
     .actions button {
         width: 6rem;
         font-size: 0.8rem;
         padding: 0.35rem 0.8rem 0.35rem;
     }
+
+    header nav .logo {
+        margin-bottom: 1rem;
+    }
+
+    header nav .logo img {
+        width: 150px;
+    }
+
+    header nav .actions {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 335px) {
+    .word-mark {
+        word-spacing: -0.2rem;
+    }
+
+    .actions button {
+        width: 4rem;
+        font-size: 0.6rem;
+    }
+
+    header nav .logo img {
+        width: 125px;
+    }
 }
 /* End navbar */
 
 /* Start landing */
+.landing-container {
+    display: flex;
+    align-items: center;
+}
+
 .landing {
     display: flex;
     position: relative;
@@ -231,14 +263,13 @@ header nav {
     line-height: 1.7;
     max-width: 500px;
     font-weight: 100;
-    text-align: center;
     text-transform: capitalize;
 }
 
 @media (max-width: 1199px) {
     .landing .img {
         width: 450px;
-        height: 450px;
+        height: 100%;
     }
 
     .landing .title {
@@ -291,17 +322,34 @@ header nav {
 
 @media (max-width: 415px) {
     .landing .title {
-        line-height: 2.5rem;
         font-size: 1.5rem;
+        line-height: 2rem;
     }
 
     .landing .text img {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
     }
 
     .landing .description {
         font-size: 11px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 335px) {
+    .landing .title {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .landing .text img {
+        display: none;
+    }
+
+    .landing .description {
+        font-size: 9px;
+        display: inline-block;
     }
 }
 /* End landing */
