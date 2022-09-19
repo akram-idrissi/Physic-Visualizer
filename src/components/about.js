@@ -1,10 +1,10 @@
 import React from "react";
-import ToHome from "./tohome";
+import GoBack from "./goback";
 
 const About = () => {
     return (
         <>
-            <ToHome />
+            <GoBack />
             <h1>About</h1>
         </>
     );

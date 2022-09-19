@@ -4,27 +4,27 @@ import { getItems, getItemByGrade } from "../items";
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
-    const [selectedGrade, setSelectedGrade] = useState("all");
+    const [selectedGrade, setSelectedGrade] = useState("All");
     const [collections, setCollections] = useState(
         getItemByGrade(selectedGrade)
     );
 
     useEffect(() => {
         switch (selectedGrade) {
-            case "all":
+            case "All":
                 setCollections(getItems());
                 break;
 
-            case "tc":
-                setCollections(getItemByGrade("tc"));
+            case "C-Core":
+                setCollections(getItemByGrade("C-Core"));
                 break;
 
-            case "1bac":
-                setCollections(getItemByGrade("1bac"));
+            case "1-Bac":
+                setCollections(getItemByGrade("1-Bac"));
                 break;
 
-            case "2bac":
-                setCollections(getItemByGrade("2bac"));
+            case "2-Bac":
+                setCollections(getItemByGrade("2-Bac"));
                 break;
 
             default:

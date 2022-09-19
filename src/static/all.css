@@ -74,6 +74,12 @@ ul {
     background-color: var(--mark-color) !important;
 }
 
+.truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .word-mark {
     word-spacing: -0.5rem;
     color: var(--mark-color);
@@ -90,8 +96,8 @@ ul {
     padding: 0.35rem 1rem 0.45rem;
 }
 
-.to-home {
-    top: 6px;
+.go-back {
+    top: 3px;
     left: 26px;
     border: none;
     display: flex;
@@ -106,12 +112,18 @@ ul {
     background-color: var(--primary-btn-color);
 }
 
-.to-home:hover {
+@media (max-width: 767px) {
+    .go-back {
+        top: -35px;
+    }
+}
+
+.go-back:hover {
     transition: var(--main-transition) ease-in-out;
     background-color: var(--primary-btn-hover-color);
 }
 
-.to-home span:first-child {
+.go-back span:first-child {
     display: inline-block;
     margin-right: 0.5rem;
     width: 1rem;
@@ -146,20 +158,20 @@ header nav {
 }
 
 .actions a button:first-child {
-    background-color: var(--primary-btn-color);
+    background-color: var(--secondary-btn-color);
 }
 
 .actions a:first-child button:hover {
-    background-color: var(--primary-btn-hover-color);
+    background-color: var(--secondary-btn-hover-color);
     transition: var(--main-transition) ease-in-out;
 }
 
 .actions a:last-child button {
-    background-color: var(--secondary-btn-color);
+    background-color: var(--primary-btn-color);
 }
 
 .actions a:last-child button:hover {
-    background-color: var(--secondary-btn-hover-color);
+    background-color: var(--primary-btn-hover-color);
     transition: var(--main-transition) ease-in-out;
 }
 
@@ -300,6 +312,8 @@ header nav {
     }
 
     .landing .description {
+        color: #bbb;
+        font-weight: bold;
         margin: 10px auto auto auto;
     }
 }
@@ -365,12 +379,15 @@ header nav {
     color: #fff;
     cursor: pointer;
     position: relative;
-    margin-right: 2rem;
     text-align: center;
     margin-right: 1rem;
     border-radius: 0.5rem;
     padding: 0.35rem 1rem 0.45rem;
     background-color: var(--primary-btn-color);
+}
+
+.grades p:last-child {
+    margin-right: 0;
 }
 
 .grades p:hover {
@@ -386,6 +403,40 @@ header nav {
     margin: 3rem auto;
     text-align: center;
     text-transform: capitalize;
+}
+
+@media (max-width: 1199px) {
+    .grades-text {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 991px) {
+    .grades-text {
+        font-size: 1.5rem;
+        max-width: 600px;
+    }
+
+    .go-back .text {
+        display: none;
+    }
+
+    .go-back span:first-child {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .grades-text {
+        font-size: 1.2rem;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 380px) {
+    .grades p {
+        font-size: 0.6rem;
+    }
 }
 /* End grades */
 
@@ -418,17 +469,13 @@ header nav {
 }
 
 .collections .info p {
-    width: 145px;
     color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 
 .collections .info button {
     border: none;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     cursor: pointer;
     border-radius: 50%;
     background-color: var(--secondary-btn-color);

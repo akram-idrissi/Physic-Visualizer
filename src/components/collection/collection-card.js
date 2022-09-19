@@ -7,7 +7,7 @@ const CollectionCard = ({ collection }) => {
         <div className="collection">
             <img src={img} alt="" />
             <div className="info">
-                <p>
+                <p className="truncate">
                     {collection.grade} - {collection.name}
                 </p>
                 <Link

@@ -2,7 +2,7 @@ import { React, useEffect, useState, lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import { getItem } from "../../items";
 import Controls from "./controls";
-import ToHome from "../tohome";
+import GoBack from "../goback";
 
 const Visualization = () => {
     const location = useLocation();
@@ -12,7 +12,7 @@ const Visualization = () => {
 
     useEffect(() => {
         let ranges = document.querySelectorAll(".range");
-        const _ = Array.from(ranges).map((range) => {
+        Array.from(ranges).map((range) => {
             range.style.background =
                 "linear-gradient(to right, #2c5bd1 0%, #2c5bd1 50%, #434b5266 50%, #434b5266 100%)";
 
@@ -27,7 +27,7 @@ const Visualization = () => {
     return (
         <>
             <div className="back-header">
-                <ToHome />
+                <GoBack />
                 <h1 className="visualization-name">{visualization.name}</h1>
             </div>
             <section className="visualization">
