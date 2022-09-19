@@ -109,7 +109,7 @@ ul {
     border-radius: 0.5rem;
     padding: 0.35rem 1rem 0.45rem;
     justify-content: space-between;
-    background-color: var(--primary-btn-color);
+    background-color: #34383b;
 }
 
 @media (max-width: 767px) {
@@ -453,6 +453,11 @@ header nav {
     padding: 1rem;
     border-radius: 6px;
     background-color: var(--primary-btn-color);
+    transition: transform var(--main-transition);
+}
+
+.collections .collection:hover {
+    transform: translateY(-10px);
 }
 
 .collections .collection img {
@@ -505,27 +510,29 @@ header nav {
     text-align: center;
 }
 
-#canvas {
-    width: 46.87rem;
-    height: 34.37rem;
-    border: 1px solid #777;
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0.5rem;
 }
 /* End visualization  */
 
 /* Start controls */
-.input {
-    display: flex;
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .controls-container {
     width: 22rem;
     padding: 1rem;
     height: 34.37rem;
+    overflow-y: scroll;
     border-radius: 0.5rem;
     background-color: #1c232a;
+}
+
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
 }
 
 .label {
@@ -570,6 +577,34 @@ header nav {
     text-align: center;
     border-radius: 0.4rem;
     background-color: rgba(85, 93, 99, 0.4);
+}
+
+@media (max-width: 1199px) {
+    .visualization {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .controls-container {
+        width: 80%;
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    .settings {
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    .input {
+        flex-direction: column;
+    }
+
+    .input label {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
 }
 /* End controls */
 
@@ -643,8 +678,10 @@ header nav {
     background-color: #3c4b5b;
 }
 ::-webkit-scrollbar-track {
+    visibility: hidden;
     background-color: #1e2833;
 }
+
 /* End scroll */
 
 /* Start animation classes */

@@ -57,6 +57,10 @@ const items = [
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
+            { id: 3, min: 1, max: 100, step: 1, name: "Gravity" },
+            { id: 4, min: 1, max: 100, step: 1, name: "Planet count" },
+            { id: 5, min: 1, max: 100, step: 1, name: "Gravity" },
+            { id: 6, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
     },
     {
