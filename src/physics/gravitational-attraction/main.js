@@ -7,8 +7,8 @@ var planet, attractor, attraction;
 
 const sketch = (p5) => {
     p5.setup = () => {
-        p5.createCanvas(750, 550);
         window.p = p5;
+        p5.createCanvas(750, 550);
         planet = new Planet(300, 100, 2);
         attractor = new Attractor();
     };

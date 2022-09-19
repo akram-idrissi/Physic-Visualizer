@@ -2,7 +2,6 @@ import { React, useEffect, useState, lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import { getItem } from "../../items";
 import Controls from "./controls";
-import Modal from "./modal";
 import GoBack from "../goback";
 
 const Visualization = () => {
@@ -24,11 +23,6 @@ const Visualization = () => {
             };
         });
     }, []);
-
-    const handleSettingsClick = () => {
-        let modal = document.getElementById("modal");
-        modal.style.visibility = "visible";
-    };
 
     return (
         <>

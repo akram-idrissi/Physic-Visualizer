@@ -4,7 +4,7 @@ const items = [
         slug: "gravitational-attraction",
         name: "Gravitational Attraction",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "gravitational-attraction/main",
         grade: "C-Core",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
@@ -13,10 +13,10 @@ const items = [
     },
     {
         id: "2",
-        slug: "air-resistence",
-        name: "Air Resistence",
+        slug: "air-resistance",
+        name: "Air resistance",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "gravitational-attraction/main",
         grade: "C-Core",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
@@ -28,7 +28,7 @@ const items = [
         slug: "friction",
         name: "Friction",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "gravitational-attraction/main",
         grade: "1-Bac",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
@@ -40,7 +40,7 @@ const items = [
         slug: "fluid-resistance",
         name: "Fluid Resistance",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "fluid-resistance/main",
         grade: "1-Bac",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
@@ -52,7 +52,7 @@ const items = [
         slug: "tank-rotation",
         name: "Tank Rotation",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "gravitational-attraction/main",
         grade: "2-Bac",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
@@ -68,7 +68,7 @@ const items = [
         slug: "boid-simulation",
         name: "Boid Simulation",
         image: "orbit.svg",
-        path: "ga/main",
+        path: "gravitational-attraction/main",
         grade: "2-Bac",
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
