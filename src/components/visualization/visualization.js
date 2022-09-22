@@ -16,7 +16,7 @@ const Visualization = () => {
         let ranges = document.querySelectorAll(".range");
         Array.from(ranges).map((range) => {
             range.style.background =
-                "linear-gradient(to right, #2c5bd1 0%, #2c5bd1 50%, #434b5266 50%, #434b5266 100%)";
+                "linear-gradient(to right, #2c5bd1 0%, #2c5bd1 0%, #434b5266 0%, #434b5266 100%)";
 
             range.oninput = () => {
                 let value =
@@ -29,14 +29,11 @@ const Visualization = () => {
     const onRangeChange = (event) => {
         let controls = {};
         const parent = event.target.parentNode;
-        const inputs = document.querySelectorAll(".input");
-
-        Array.from(inputs).map((input, i) => {
+        const inputsRange = document.querySelectorAll(".input");
+        Array.from(inputsRange).map((input, i) => {
             controls[i] = input.querySelector(".range").value;
         });
-
         parent.querySelector(".range-value").value = event.target.value;
-
         setState(controls);
     };
 
@@ -57,10 +54,12 @@ const Visualization = () => {
                                 <label className="label">{prop.name}</label>
                                 <div className="controls">
                                     <input
+                                        defaultValue={visualization.controls[i]}
                                         className="range-value"
                                         type="text"
                                     />
                                     <input
+                                        defaultValue={visualization.controls[i]}
                                         type="range"
                                         min={prop.min}
                                         max={prop.max}

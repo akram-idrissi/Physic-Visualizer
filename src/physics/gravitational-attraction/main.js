@@ -12,7 +12,6 @@ const sketch = (p5) => {
     p5.updateWithProps = (props) => {
         gravity = props.state[0];
         masse = props.state[1];
-        console.log(gravity, masse);
     };
 
     p5.setup = () => {
@@ -25,9 +24,7 @@ const sketch = (p5) => {
     p5.draw = () => {
         attractor.mass = masse;
         attractor.G = gravity;
-        p5.background(51);
-        p5.stroke(2);
-        p5.fill(250);
+        p5.background("#1c232a");
 
         attraction = attractor.attract(planet);
         planet.applyForce(attraction);

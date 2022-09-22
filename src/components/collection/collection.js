@@ -1,8 +1,8 @@
 import { React, useContext, useEffect } from "react";
 import { Context } from "../../context/context";
 import CollectionCard from "./collection-card";
-import Grades from "./grades";
 import GoBack from "../goback";
+import Grades from "./grades";
 
 const Collection = () => {
     const { collections } = useContext(Context);
@@ -38,12 +38,19 @@ const Collection = () => {
             <GoBack />
             <Grades />
             <div className="collections">
-                {collections.map((collection) => (
-                    <CollectionCard
-                        key={collection.id}
-                        collection={collection}
-                    />
-                ))}
+                {collections.length > 0 ? (
+                    collections.map((collection) => (
+                        <CollectionCard
+                            key={collection.id}
+                            collection={collection}
+                        />
+                    ))
+                ) : (
+                    <p className="sorry-msg">
+                        There is no collection yet, please come back later for
+                        new updates !
+                    </p>
+                )}
             </div>
         </>
     );

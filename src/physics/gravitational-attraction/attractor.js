@@ -22,9 +22,8 @@ class Attractor {
     }
 
     display() {
-        this.p.stroke(0);
-        this.p.strokeWeight(4);
-        this.p.fill(175, 200);
+        this.p.strokeWeight(0);
+        this.p.fill("#f9d71c");
         this.p.ellipse(
             this.position.x,
             this.position.y,

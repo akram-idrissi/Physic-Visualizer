@@ -70,6 +70,15 @@ ul {
 /* End Global Rules */
 
 /* Start global classes */
+.sorry-msg {
+    color: #777;
+    grid-column: 1/-1;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 .active {
     background-color: var(--mark-color) !important;
 }
@@ -450,9 +459,9 @@ header nav {
 }
 
 .collections .collection {
-    padding: 1rem;
-    border-radius: 6px;
-    background-color: var(--primary-btn-color);
+    /*     padding: 1rem; */
+    /*     background-color: var(--primary-btn-color); */
+    position: relative;
     transition: transform var(--main-transition);
 }
 
@@ -462,15 +471,18 @@ header nav {
 
 .collections .collection img {
     width: 100%;
-    height: 200px;
     max-width: 100%;
+    border-radius: 0.5rem;
 }
 
 .collections .collection .info {
-    display: flex;
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+    /* display: flex;
     margin-top: 1rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .collections .info p {
@@ -508,6 +520,10 @@ header nav {
 .visualization-name {
     color: #fff;
     text-align: center;
+}
+
+canvas {
+    border-radius: 0.5rem;
 }
 /* End visualization  */
 

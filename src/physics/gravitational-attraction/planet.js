@@ -1,3 +1,5 @@
+import color from "../colors";
+
 class Planet {
     constructor(x, y, m) {
         this.mass = m;
@@ -35,9 +37,8 @@ class Planet {
     }
 
     display() {
-        this.p.stroke(0);
-        this.p.strokeWeight(1);
-        this.p.fill(255, 100);
+        this.p.strokeWeight(0);
+        this.p.fill(color);
         this.p.ellipse(this.position.x, this.position.y, this.radius);
     }
 }
