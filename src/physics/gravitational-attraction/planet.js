@@ -2,7 +2,7 @@ class Planet {
     constructor(x, y, m) {
         this.mass = m;
         this.p = window.p;
-        this.radius = this.mass * 8;
+        this.radius = this.mass * 2;
         this.p5 = window.p.constructor;
         this.position = this.p.createVector(x, y);
         this.velocity = this.p.createVector(1, 0);
@@ -16,7 +16,7 @@ class Planet {
     }
 
     bounce() {
-        if (this.position.x > this.p.width) {
+        if (this.position.x > this.p.width - this.radius) {
             this.position.x = this.p.width;
             this.velocity.x *= -1;
         } else if (this.position.x < 0) {
@@ -38,7 +38,7 @@ class Planet {
         this.p.stroke(0);
         this.p.strokeWeight(1);
         this.p.fill(255, 100);
-        this.p.ellipse(this.position.x, this.position.y, this.radius * 2);
+        this.p.ellipse(this.position.x, this.position.y, this.radius);
     }
 }
 

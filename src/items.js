@@ -7,9 +7,10 @@ const items = [
         path: "gravitational-attraction/main",
         grade: "C-Core",
         props: [
-            { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
-            { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
+            { id: 1, min: 0.1, max: 5, step: 1, name: "Gravity" },
+            { id: 2, min: 10, max: 40, step: 1, name: "Attractor mass" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
     {
         id: "2",
@@ -22,6 +23,7 @@ const items = [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
     {
         id: "3",
@@ -34,6 +36,7 @@ const items = [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
     {
         id: "4",
@@ -46,6 +49,7 @@ const items = [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
     {
         id: "5",
@@ -57,11 +61,8 @@ const items = [
         props: [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
-            { id: 3, min: 1, max: 100, step: 1, name: "Gravity" },
-            { id: 4, min: 1, max: 100, step: 1, name: "Planet count" },
-            { id: 5, min: 1, max: 100, step: 1, name: "Gravity" },
-            { id: 6, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
     {
         id: "6",
@@ -74,6 +75,7 @@ const items = [
             { id: 1, min: 1, max: 100, step: 1, name: "Gravity" },
             { id: 2, min: 1, max: 100, step: 1, name: "Planet count" },
         ],
+        controls: { 0: 1, 1: 20 },
     },
 ];
 

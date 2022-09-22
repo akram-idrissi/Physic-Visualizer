@@ -4,6 +4,8 @@ import { getItems, getItemByGrade } from "../items";
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
+    const [sketch, setSketch] = useState(null);
+    const [controls, setControls] = useState({});
     const [selectedGrade, setSelectedGrade] = useState("All");
     const [collections, setCollections] = useState(
         getItemByGrade(selectedGrade)
@@ -45,6 +47,10 @@ const ContextProvider = ({ children }) => {
                 selectedGrade,
                 setSelectedGrade,
                 handleSelectedGradeClick,
+                controls,
+                setControls,
+                sketch,
+                setSketch,
             }}
         >
             {children}

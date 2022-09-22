@@ -1,13 +1,13 @@
 class Attractor {
-    constructor() {
+    constructor(g, m) {
+        this.G = g;
+        this.mass = m;
         this.p = window.p;
         this.p5 = window.p.constructor;
         this.position = this.p.createVector(
             this.p.width / 2,
             this.p.height / 2
         );
-        this.mass = 20;
-        this.G = 1;
     }
 
     attract(planet) {

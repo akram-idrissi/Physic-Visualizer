@@ -1,14 +1,16 @@
-import { React, useEffect, useState, lazy, Suspense } from "react";
+import { React, useEffect, useState, useRef, Suspense, lazy } from "react";
 import { useLocation } from "react-router-dom";
 import { getItem } from "../../items";
-import Controls from "./controls";
 import GoBack from "../goback";
 
 const Visualization = () => {
     const location = useLocation();
     const [visualization] = useState(getItem(location.state));
+    const [state, setState] = useState(visualization.controls);
 
-    const Main = lazy(() => import(`../../physics/${visualization.path}.js`));
+    const main = useRef(
+        lazy(() => import(`../../physics/${visualization.path}.js`))
+    );
 
     useEffect(() => {
         let ranges = document.querySelectorAll(".range");
@@ -24,6 +26,20 @@ const Visualization = () => {
         });
     }, []);
 
+    const onRangeChange = (event) => {
+        let controls = {};
+        const parent = event.target.parentNode;
+        const inputs = document.querySelectorAll(".input");
+
+        Array.from(inputs).map((input, i) => {
+            controls[i] = input.querySelector(".range").value;
+        });
+
+        parent.querySelector(".range-value").value = event.target.value;
+
+        setState(controls);
+    };
+
     return (
         <>
             <div className="back-header">
@@ -32,13 +48,28 @@ const Visualization = () => {
             </div>
             <section className="visualization">
                 <Suspense>
-                    <Main />
+                    <main.current state={state} />
                 </Suspense>
-
                 <div className="controls-container">
                     {visualization.props.length > 0 &&
-                        visualization.props.map((prop) => (
-                            <Controls key={prop.id} data={prop} />
+                        visualization.props.map((prop, i) => (
+                            <div key={i} className="input">
+                                <label className="label">{prop.name}</label>
+                                <div className="controls">
+                                    <input
+                                        className="range-value"
+                                        type="text"
+                                    />
+                                    <input
+                                        type="range"
+                                        min={prop.min}
+                                        max={prop.max}
+                                        step={prop.step}
+                                        className="range"
+                                        onChange={onRangeChange}
+                                    />
+                                </div>
+                            </div>
                         ))}
                 </div>
             </section>

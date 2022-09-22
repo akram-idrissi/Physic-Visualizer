@@ -1,24 +1,37 @@
-import React from "react";
+import { React } from "react";
 
-const Controls = ({ data }) => {
+const Controls = ({ visualization }) => {
+
+    
+
+
+
+    const setRangeOutput = (event) => {
+        const parent = event.target.parentNode;
+        parent.querySelector(".range-value").value =
+            parent.querySelector(".range").value;
+    };
+
     return (
-        <div className="input">
-            <label className="label">{data.name}</label>
-            <div className="controls">
-                <input
-                    className="range-value"
-                    type="text"
-                    defaultValue="10.0"
-                />
-                <input
-                    className="range"
-                    type="range"
-                    min={data.min}
-                    max={data.max}
-                    step={data.step}
-                />
-            </div>
-        </div>
+        <>
+            {visualization.props.length > 0 &&
+                visualization.props.map((prop, i) => (
+                    <div key={i} className="input">
+                        <label className="label">{prop.name}</label>
+                        <div className="controls">
+                            <input className="range-value" type="text" />
+                            <input
+                                data-index={i}
+                                className="range"
+                                type="range"
+                                min={prop.min}
+                                max={prop.max}
+                                step={prop.step}
+                            />
+                        </div>
+                    </div>
+                ))}
+        </>
     );
 };
 
