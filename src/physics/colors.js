@@ -7,6 +7,8 @@ const palette = [
     "#61C0FF",
 ];
 
+const backgroundColor = "#1c232a";
+const mainObjColor = "#f9d71c";
 const color = palette[Math.floor(Math.random() * palette.length)];
 
-export default color;
+export { color, backgroundColor, mainObjColor };

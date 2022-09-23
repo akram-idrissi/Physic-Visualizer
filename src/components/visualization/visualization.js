@@ -14,9 +14,13 @@ const Visualization = () => {
 
     useEffect(() => {
         let ranges = document.querySelectorAll(".range");
-        Array.from(ranges).map((range) => {
-            range.style.background =
-                "linear-gradient(to right, #2c5bd1 0%, #2c5bd1 0%, #434b5266 0%, #434b5266 100%)";
+        Array.from(ranges).map((range, i) => {
+            let percentage =
+                visualization.props[i].min == visualization.controls[i]
+                    ? 0
+                    : 100 /
+                      (visualization.props[i].max / visualization.controls[i]);
+            range.style.background = `linear-gradient(to right, #2c5bd1 0%, #2c5bd1 ${percentage}%, #434b5266 ${percentage}%, #434b5266 100%)`;
 
             range.oninput = () => {
                 let value =

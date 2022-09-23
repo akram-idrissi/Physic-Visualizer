@@ -1,3 +1,5 @@
+import { mainObjColor } from "../colors";
+
 class Attractor {
     constructor(g, m) {
         this.G = g;
@@ -23,7 +25,7 @@ class Attractor {
 
     display() {
         this.p.strokeWeight(0);
-        this.p.fill("#f9d71c");
+        this.p.fill(mainObjColor);
         this.p.ellipse(
             this.position.x,
             this.position.y,

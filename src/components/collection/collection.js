@@ -47,8 +47,8 @@ const Collection = () => {
                     ))
                 ) : (
                     <p className="sorry-msg">
-                        There is no collection yet, please come back later for
-                        new updates !
+                        There is no collection here yet, please come back later
+                        for new updates !
                     </p>
                 )}
             </div>

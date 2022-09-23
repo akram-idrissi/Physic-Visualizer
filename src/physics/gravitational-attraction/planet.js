@@ -1,4 +1,4 @@
-import color from "../colors";
+import { color } from "../colors";
 
 class Planet {
     constructor(x, y, m) {

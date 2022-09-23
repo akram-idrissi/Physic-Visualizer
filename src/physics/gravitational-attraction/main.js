@@ -2,6 +2,7 @@ import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import Attractor from "./attractor";
 import Planet from "./planet";
+import { backgroundColor } from "../colors";
 
 var planet, attractor, attraction;
 
@@ -24,7 +25,7 @@ const sketch = (p5) => {
     p5.draw = () => {
         attractor.mass = masse;
         attractor.G = gravity;
-        p5.background("#1c232a");
+        p5.background(backgroundColor);
 
         attraction = attractor.attract(planet);
         planet.applyForce(attraction);

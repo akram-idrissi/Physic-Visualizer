@@ -13,7 +13,7 @@ const Main = () => {
                 </span>
                 <p className="description">
                     Learning by visualising is the quickest, most effective way
-                    <br /> of learning physics
+                    <br /> to learn physics
                 </p>
             </h1>
 
