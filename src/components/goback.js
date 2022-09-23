@@ -1,11 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const GoBack = () => {
+const GoBack = ({ style }) => {
     const navigate = useNavigate();
 
     return (
-        <button className="go-back" onClick={() => navigate(-1)}>
+        <button
+            className="go-back"
+            onClick={() => navigate(-1)}
+            style={style ? style : ""}
+        >
             <span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

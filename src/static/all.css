@@ -377,6 +377,23 @@ header nav {
 }
 /* End landing */
 
+/* Start about */
+.about {
+    color: #fff;
+    margin-top: 6rem;
+}
+
+.about-title {
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    width: 500px;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+/* End about */
+
 /* Start grades */
 .grades {
     display: flex;

@@ -13,14 +13,14 @@ class Attractor {
     }
 
     attract(planet) {
-        let force = this.p5.Vector.sub(this.position, planet.position);
-        let distance = force.mag();
-        distance = this.p.constrain(distance, 5, 25);
+        this.force = this.p5.Vector.sub(this.position, planet.position);
+        let distance = this.force.mag();
+        distance = this.p.constrain(distance, 5, 20);
         /* force.normalize(); */
         let strength =
             (this.G * planet.mass * this.mass) / (distance * distance);
-        force.setMag(strength);
-        return force;
+        this.force.setMag(strength);
+        return this.force;
     }
 
     display() {

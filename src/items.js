@@ -8,7 +8,7 @@ const items = [
         image: "ga.png",
         props: [
             { id: 1, min: 0.1, max: 5, step: 0.1, name: "Gravity" },
-            { id: 2, min: 30, max: 100, step: 10, name: "Planet count" },
+            { id: 2, min: 30, max: 100, step: 10, name: "Attractor Mass" },
         ],
         controls: { 0: 0.1, 1: 30 },
     },
