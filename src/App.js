@@ -9,6 +9,7 @@ import { ContextProvider } from "./context/context";
 import Visualization from "./components/visualization/visualization";
 
 import "./static/all.css";
+import Error404 from "./components/errors/404";
 
 const App = () => {
     return (
@@ -17,7 +18,8 @@ const App = () => {
                 <Router>
                     <Routes>
                         <Route path="/" element={<Landing />}></Route>
-                        <Route
+                        <Route path="*" element={<Error404 />} />
+                        <Route 
                             path="/visualize/:slug"
                             element={<Visualization />}
                         ></Route>

@@ -70,6 +70,16 @@ ul {
 }
 /* End Global Rules */
 
+/* Start errors*/
+.e-404 {
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* End errors*/
+
 /* Start global classes */
 .sorry-msg {
     color: #777;
@@ -120,6 +130,10 @@ ul {
     padding: 0.35rem 1rem 0.45rem;
     justify-content: space-between;
     background-color: #34383b;
+}
+
+.go-home a {
+    color: #393939;
 }
 
 @media (max-width: 767px) {
