@@ -400,14 +400,38 @@ header nav {
 }
 
 .about-title {
+    max-width: 500px;
     margin-bottom: 2rem;
 }
 
 .about-text {
-    width: 500px;
+    max-width: 500px;
     margin-bottom: 1rem;
     text-align: justify;
 }
+
+@media (max-width: 280px) {
+    .about-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 215px) {
+    .about-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+    }
+}
+
 /* End about */
 
 /* Start grades */
@@ -552,6 +576,7 @@ header nav {
 
 .visualization-name {
     color: #fff;
+    padding-top: 1rem;
     text-align: center;
 }
 

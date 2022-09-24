@@ -59,7 +59,7 @@ const Visualization = () => {
     return (
         <>
             <div className="back-header">
-                <GoBack style={{}} />
+                <GoBack style={{ top: "-20px" }} />
                 <h1 className="visualization-name">{visualization.name}</h1>
             </div>
             <section className="visualization">
