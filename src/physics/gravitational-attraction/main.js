@@ -13,6 +13,12 @@ const sketch = (p5) => {
     p5.updateWithProps = (props) => {
         gravity = props.state[0];
         mass = props.state[1];
+
+        if (attractor && (attractor.mass != mass || attractor.G != gravity)) {
+            attractor.mass = mass;
+            attractor.G = gravity;
+            planet = new Planet(300, 100, 15);
+        }
     };
 
     p5.setup = () => {
@@ -23,17 +29,13 @@ const sketch = (p5) => {
     };
 
     p5.draw = () => {
-        if (attractor.mass != mass || attractor.G != gravity) {
-            attractor.mass = mass;
-            attractor.G = gravity;
-        }
-
         p5.background(backgroundColor);
 
         attraction = attractor.attract(planet);
         planet.applyForce(attraction);
         planet.update();
 
+        /* planet.bounceEdges(); */
         attractor.display();
         planet.display();
     };

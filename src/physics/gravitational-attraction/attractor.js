@@ -2,6 +2,7 @@ import { mainObjColor } from "../colors";
 
 class Attractor {
     constructor(g, m) {
+        this.force = 0;
         this.G = g;
         this.mass = m;
         this.p = window.p;
@@ -16,7 +17,7 @@ class Attractor {
         this.force = this.p5.Vector.sub(this.position, planet.position);
         let distance = this.force.mag();
         distance = this.p.constrain(distance, 5, 20);
-        /* force.normalize(); */
+        this.force.normalize();
         let strength =
             (this.G * planet.mass * this.mass) / (distance * distance);
         this.force.setMag(strength);

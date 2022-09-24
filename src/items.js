@@ -7,7 +7,7 @@ const items = [
         grade: "C-Core",
         image: "ga.png",
         props: [
-            { id: 1, min: 0.1, max: 5, step: 0.1, name: "Gravity" },
+            { id: 1, min: 0.1, max: 3, step: 0.1, name: "Gravity" },
             { id: 2, min: 30, max: 100, step: 10, name: "Attractor Mass" },
         ],
         controls: { 0: 0.1, 1: 30 },
@@ -21,9 +21,9 @@ const items = [
         image: "pendulum.png",
         props: [
             { id: 1, min: 10, max: 500, step: 10, name: "Line Length" },
-            { id: 2, min: 30, max: 100, step: 10, name: "Speed" },
+            { id: 2, min: 0.4, max: 10, step: 0.1, name: "Speed" },
         ],
-        controls: { 0: 170, 1: 30 },
+        controls: { 0: 170, 1: 0.4 },
     },
 ];
 

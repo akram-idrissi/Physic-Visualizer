@@ -18,12 +18,13 @@ class Pendulum {
         this.origin = this.p.createVector(x, y);
         this.position = this.p.createVector();
         this.r = r;
-        this.angle = this.p.PI / 4;
+        this.angle = this.p.PI / 3;
 
         this.aVelocity = 0.0;
         this.aAcceleration = 0.0;
         this.damping = 0.995; // Arbitrary damping
         this.ballr = 48.0; // Arbitrary ball radius
+        this.gravity = 0.04; // Arbitrary constant
 
         this.dragging = false;
     }
@@ -32,9 +33,8 @@ class Pendulum {
     update() {
         // As long as we aren't dragging the pendulum, let it swing!
         if (!this.dragging) {
-            let gravity = 0.4; // Arbitrary constant
             this.aAcceleration =
-                ((-1 * gravity) / this.r) * this.p.sin(this.angle); // Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
+                ((-1 * this.gravity) / this.r) * this.p.sin(this.angle); // Calculate acceleration (see: http://www.myphysicslab.com/pendulum1.html)
             this.aVelocity += this.aAcceleration; // Increment velocity
             this.aVelocity *= this.damping; // Arbitrary damping
             this.angle += this.aVelocity; // Increment angle

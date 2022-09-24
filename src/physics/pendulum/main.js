@@ -8,7 +8,6 @@ let pendulum;
 const sketch = (p5) => {
     let lineLnegth, speed;
     p5.updateWithProps = (props) => {
-        console.log(props.state);
         lineLnegth = props.state[0];
         speed = props.state[1];
     };
@@ -21,18 +20,20 @@ const sketch = (p5) => {
 
     p5.draw = () => {
         pendulum.r = lineLnegth;
+        pendulum.gravity = speed;
         p5.background(backgroundColor);
         pendulum.update();
         pendulum.drag(); // for user interaction
         pendulum.display();
     };
 
-    p5.mousePressed = () => {
-        pendulum.clicked(p5.mouseX, p5.mouseY);
-    };
-
-    p5.mouseReleased = () => {
-        pendulum.stopDragging();
+    p5.mousePressed = (event) => {
+        if (typeof event.target.getAttribute("id") === "string") {
+            pendulum.clicked(p5.mouseX, p5.mouseY);
+            p5.mouseReleased = () => {
+                pendulum.stopDragging();
+            };
+        }
     };
 };
 
