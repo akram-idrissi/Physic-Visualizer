@@ -13,6 +13,21 @@ const Visualization = () => {
     );
 
     useEffect(() => {
+        const handleWindowResize = () => {
+            let width = window.innerWidth;
+
+            let image = document.querySelector(".landing img");
+
+            !image &&
+                (document.querySelector("body").style.overflowY = "scroll");
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+        handleWindowResize();
+        return () => window.removeEventListener("resize", handleWindowResize);
+    });
+
+    useEffect(() => {
         let ranges = document.querySelectorAll(".range");
         Array.from(ranges).map((range, i) => {
             let percentage =

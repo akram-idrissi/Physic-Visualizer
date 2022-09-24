@@ -1,8 +1,25 @@
-import React from "react";
+import { React, useEffect } from "react";
 import orbit from "../../images/landing/orbit.svg";
 import landing from "../../images/landing/landing.svg";
 
 const Main = () => {
+    useEffect(() => {
+        const handleWindowResize = () => {
+            let width = window.innerWidth;
+
+            let image = document.querySelector(".landing img");
+
+            image = image
+                ? width < 1200
+                    ? (document.querySelector("body").style.overflow = "hidden")
+                    : ""
+                : "";
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+        handleWindowResize();
+        return () => window.removeEventListener("resize", handleWindowResize);
+    });
     return (
         <div className="landing">
             <h1 className="title animation fade-left delay-0-75">

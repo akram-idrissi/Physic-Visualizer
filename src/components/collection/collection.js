@@ -7,6 +7,21 @@ import Grades from "./grades";
 const Collection = () => {
     const { collections } = useContext(Context);
 
+    useEffect(() => {
+        const handleWindowResize = () => {
+            let width = window.innerWidth;
+
+            let image = document.querySelector(".landing img");
+
+            !image &&
+                (document.querySelector("body").style.overflowY = "scroll");
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+        handleWindowResize();
+        return () => window.removeEventListener("resize", handleWindowResize);
+    });
+
     const useWindowSize = () => {
         useEffect(() => {
             const handleWindowResize = () => {

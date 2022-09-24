@@ -25,6 +25,7 @@ html {
 }
 
 body {
+    overflow: hidden;
     font-family: Inter, sans-serif;
     background-color: var(--main-color);
 }
@@ -476,9 +477,9 @@ header nav {
 }
 
 .collections .collection {
-    /*     padding: 1rem; */
-    /*     background-color: var(--primary-btn-color); */
     position: relative;
+    border-radius: 0.5rem;
+    background-color: #1c232a;
     transition: transform var(--main-transition);
 }
 
@@ -488,7 +489,6 @@ header nav {
 
 .collections .collection img {
     width: 100%;
-    height: 263px;
     max-width: 100%;
     border-radius: 0.5rem;
 }
@@ -715,7 +715,6 @@ canvas {
     visibility: hidden;
     background-color: #1e2833;
 }
-
 /* End scroll */
 
 /* Start animation classes */

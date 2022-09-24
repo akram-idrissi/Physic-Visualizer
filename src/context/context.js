@@ -6,7 +6,9 @@ const Context = createContext();
 const ContextProvider = ({ children }) => {
     const [sketch, setSketch] = useState(null);
     const [controls, setControls] = useState({});
-    const [selectedGrade, setSelectedGrade] = useState("All");
+    const [selectedGrade, setSelectedGrade] = useState(
+        localStorage.getItem("grade") || "All"
+    );
     const [collections, setCollections] = useState(
         getItemByGrade(selectedGrade)
     );
@@ -36,7 +38,9 @@ const ContextProvider = ({ children }) => {
     }, [selectedGrade]);
 
     const handleSelectedGradeClick = (event) => {
-        setSelectedGrade(event.target.getAttribute("data-grade"));
+        let grade = event.target.getAttribute("data-grade");
+        localStorage.setItem("grade", grade);
+        setSelectedGrade(grade);
     };
 
     return (
