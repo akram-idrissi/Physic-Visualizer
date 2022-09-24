@@ -344,9 +344,9 @@ header nav {
 
 @media (max-width: 767px) {
     .landing .title {
-        line-height: 2.5rem;
-        margin-bottom: 18rem;
         font-size: 2rem;
+        margin-top: 12rem;
+        line-height: 2.5rem;
     }
 
     .landing .text img {

@@ -4,7 +4,7 @@ import GoBack from "./goback";
 const About = () => {
     return (
         <>
-            {<GoBack style={{top: "-65px", left: "15px"}} />}
+            {<GoBack style={{ top: "-65px", left: "15px" }} />}
             <div className="about">
                 <h1 className="about-title">
                     <span>Physic</span>
@@ -12,14 +12,14 @@ const About = () => {
                 </h1>
 
                 <p className="about-text">
-                    This website is physic-visualizer-hub, that allows students
-                    to visualise high school physic laws and have a good
-                    understanding of them.
+                    This website is a physic-visualizer-hub, that allows
+                    students to visualise high school physic laws and have a
+                    good understanding of them.
                 </p>
                 <p className="about-text">
-                    The site is created by a computer science student who how
-                    had a hard time learning physics in theory back in a days
-                    when he was in high school
+                    The site is created by a computer science student who had a
+                    hard time learning physics in theory back in the days when
+                    he was in high school.
                 </p>
             </div>
         </>
