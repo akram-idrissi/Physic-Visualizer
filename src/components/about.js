@@ -12,9 +12,9 @@ const About = () => {
                 </h1>
 
                 <p className="about-text">
-                    This website is a physic-visualizer-hub, that allows
-                    students to visualise high school physic laws and have a
-                    good understanding of them.
+                    This website is a physic-visualizer-hub (in its early
+                    stages), that allows students to visualise high school
+                    physic laws and have a good understanding of them.
                 </p>
                 <p className="about-text">
                     The site is created by a computer science student who had a
