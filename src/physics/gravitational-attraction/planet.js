@@ -6,7 +6,7 @@ class Planet {
         this.radius = this.mass * 2;
         this.p5 = window.p.constructor;
         this.position = this.p.createVector(x, y);
-        this.velocity = this.p.createVector(2, 0);
+        this.velocity = this.p.createVector(1, 0);
         this.acceleration = this.p.createVector(0, 0);
     }
 
